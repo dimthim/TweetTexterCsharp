@@ -54,7 +54,7 @@ namespace TwitterSharp
                 using(var TwitterClient = new HttpClient())
                 {
                     TwitterClient.DefaultRequestHeaders.Authorization =
-                        new AuthenticationHeaderValue("Bearer", "AAAAAAAAAAAAAAAAAAAAANIFEgEAAAAAC1%2F4cuMGUpNgGfdcfCteF%2F4JHSA%3DhSNOROobfSNHj3rrVJ3AnTi3i2X8NhZ6m7gBJut2NIK0NgB0XC");
+                        new AuthenticationHeaderValue("Bearer", "Put Bearer token string that you received from twitter here");
                     TwitStr = await TwitterClient.GetStringAsync(TwitterURI);
                 }
                 
@@ -138,7 +138,7 @@ namespace TwitterSharp
 
                     //send text message via email.
                     MimeMessage TextAlert = new MimeMessage();
-                    TextAlert.From.Add(new MailboxAddress (GlobalVars.TwitterHandle, "1s22p63d104f14@gmail.com"));
+                    TextAlert.From.Add(new MailboxAddress (GlobalVars.TwitterHandle, "Put your email address here"));
                     TextAlert.To.Add(new MailboxAddress(GlobalVars.PhoneNumber + GetProviderAddress()));
                     TextAlert.Subject = GlobalVars.TwitterHandle;
 
@@ -195,7 +195,7 @@ namespace TwitterSharp
                 //client.Connect(URI,Port,SecurityOptions)
                 client.Connect("smtp.gmail.com", 465, SecureSocketOptions.SslOnConnect);
 
-                client.Authenticate("1s22p63d104f14@gmail.com", GlobalVars.RandoDingen);
+                client.Authenticate("Put your email address here", GlobalVars.RandoDingen);
 
                 client.Send(TextAlert);
       
