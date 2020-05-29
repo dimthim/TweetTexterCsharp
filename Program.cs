@@ -14,7 +14,7 @@ namespace TwitterSharp
         
         public static string PhoneNumber = "";
         public static string TwitterHandle = "";
-        public static string RandoDingen = "Cna874195?";
+        public static string RandoDingen = "Your Email password here";
         public static int Provider = 0;
     }
 
